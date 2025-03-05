@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  margin: 0px 0px 15vh 5vw;
+  padding: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-weight: 600;
+  font-style: italic;
+}
