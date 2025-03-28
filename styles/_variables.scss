@@ -1,0 +1,105 @@
+$URL: "";
+$assets: "/";
+
+$font-small: 12px;
+$font-base: 16px;
+$font-large: 18px;
+
+/**
+ * SCREEN SIZES
+ */
+
+$screen-extreme-min: 2500px;
+$screen-big-min: 1900px;
+
+$screen-xxl-min: 1500px;
+$screen-xl-min: 1300px;
+$screen-lg-min: 1100px;
+$screen-md-min: 992px;
+$screen-sm-min: 768px;
+
+$screen-xs-min: 576px;
+$screen-xxs-min: 320px;
+
+$screen-xl-max: $screen-xxl-min - 1;
+$screen-lg-max: $screen-xl-min - 1;
+$screen-md-max: $screen-lg-min - 1;
+$screen-sm-max: $screen-md-min - 1;
+$screen-xs-max: $screen-sm-min - 1;
+
+$screen-sizes: (
+  "xxxs": (
+    "min": 0,
+  ),
+  "xxs": (
+    "min": $screen-xxs-min,
+  ),
+  "xs": (
+    "min": $screen-xs-min,
+  ),
+  "sm": (
+    "min": $screen-sm-min,
+  ),
+  "md": (
+    "min": $screen-md-min,
+  ),
+  "lg": (
+    "min": $screen-lg-min,
+  ),
+  "xl": (
+    "min": $screen-xl-min,
+  ),
+  "xxl": (
+    "min": $screen-xxl-min,
+  ),
+);
+
+/**
+ * COLORS
+ */
+$purple-lightest: #a07acc;
+$purple-light: #5c2d91;
+$purple-dark: #45216f;
+
+$blue-light: #49e5f3;
+$blue-normal: #00c9db;
+$blue-dark: #1ab6cd;
+
+$yellow-light: #ffefab;
+$yellow-normal: #ffea7a;
+$yellow-dark: #ffd900;
+
+$green-light: #b0e2d1;
+$green-normal: #76d0b2;
+$green-dark: #00a974;
+
+$white: #ffffff;
+
+$grey-light: #f5f5f5;
+$grey-purple: #dfd8e7;
+
+$blue: #1b3e94;
+$red: lighten(#ea2027, 5%);
+$reddark: #db0025;
+$orange: #d55a0a;
+
+$blue-gradient-dark: #010a13;
+$blue-gradient-light: #172735;
+$blue-gradient-lighter: #143f76;
+
+$red-gradient-dark: #0e141c;
+
+/**
+ *  MIXINS
+ */
+
+//Smooth font rendering in webkit and moz
+@mixin fontsmoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
