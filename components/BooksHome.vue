@@ -4,10 +4,14 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { routerKey } from "vue-router";
 
 const sceneContainer = ref(null);
+const bookModels = [];
+const router = useRouter();
 
 onMounted(async () => {
   const scene = new THREE.Scene();
@@ -22,9 +26,9 @@ onMounted(async () => {
   renderer.setClearColor(0x000000, 0);
   sceneContainer.value.appendChild(renderer.domElement);
 
-  camera.position.set(0, 1, 5);
+  camera.position.set(0, 1, 0.1);
 
-  const light = new THREE.AmbientLight(0xffffff, 1);
+  const light = new THREE.AmbientLight(0xffffff, 2);
   scene.add(light);
 
   const res = await fetch("/data/books.json");
@@ -33,39 +37,99 @@ onMounted(async () => {
   const loader = new GLTFLoader();
 
   books.forEach((book, index) => {
-    loader.load(
-      book.model,
-      (gltf) => {
-        const model = gltf.scene;
+    loader.load(book.model, (gltf) => {
+      const model = gltf.scene;
 
-        // Normalize model size
-        const box = new THREE.Box3().setFromObject(model);
-        const size = new THREE.Vector3();
-        box.getSize(size);
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scaleFactor = 2 / maxDim;
-        model.scale.setScalar(scaleFactor);
+      model.rotation.set(0, 0, 0);
+      model.traverse((child) => {
+        if (child.isMesh) {
+          child.geometry?.center();
+          child.geometry?.computeBoundingBox();
+        }
+      });
 
-        // Center the model
-        const center = new THREE.Vector3();
-        box.getCenter(center);
-        model.position.sub(center);
+      // SXCALING
+      const box = new THREE.Box3().setFromObject(model);
+      const size = new THREE.Vector3();
+      box.getSize(size);
+      const targetHeight = 1.8;
+      const scaleFactor = targetHeight / size.y;
+      model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-        // Position books with spacing
-        model.position.x = index * 2 - (books.length - 0);
-        model.position.y = 0;
+      // model.rotation.y = Math.PI / 9;
 
-        scene.add(model);
-      },
-      undefined,
-      (error) => {
-        console.error(`❌ Failed to load ${book.title}:`, error);
+      // Reposition at bottom y
+      const scaledBox = new THREE.Box3().setFromObject(model);
+      const minY = scaledBox.min.y;
+      model.position.y = -minY;
+
+      // X position
+      const spacing = 0.1;
+      const totalWidth = (books.length - 1) * spacing;
+      model.position.x = index * spacing - totalWidth / 2;
+
+      model.userData = { id: book.id };
+      model.cursor = "pointer";
+      model.onClick = () => {
+        router.push({ path: `/BookDetail/${book.id}` });
+      };
+
+      model.targetScale = 1;
+      bookModels.push(model);
+      scene.add(model);
+    });
+  });
+
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+
+  window.addEventListener("mousemove", (event) => {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -((event.clientY / window.innerHeight) * 2 - 1);
+  });
+
+  window.addEventListener("click", () => {
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(scene.children, true);
+    if (intersects.length > 0) {
+      let clicked = intersects[0].object;
+      while (clicked.parent && clicked.parent.type !== "Scene") {
+        clicked = clicked.parent;
       }
-    );
+      if (clicked.userData?.id) {
+        clicked.onClick();
+      }
+    }
   });
 
   const animate = () => {
     requestAnimationFrame(animate);
+
+    //SEt up raycaster for book & mouse dedection and enlarge on gover
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    let newHovered = null;
+    if (intersects.length > 0) {
+      newHovered = intersects[0].object;
+      while (newHovered.parent && newHovered.parent.type !== "Scene") {
+        newHovered = newHovered.parent;
+      }
+    }
+
+    bookModels.forEach((model) => {
+      const isHovered = model === newHovered;
+      model.targetScale = isHovered ? 1.3 : 1.0;
+
+      const currentScale = model.scale.x;
+      const newScale = THREE.MathUtils.lerp(
+        currentScale,
+        model.targetScale,
+        0.1
+      );
+      model.scale.setScalar(newScale);
+    });
+
     renderer.render(scene, camera);
   };
   animate();

@@ -1,6 +1,6 @@
 <template>
+  <Home />
   <ThreeScene />
-  <h1>Joeee</h1>
 </template>
 
 <script setup>
