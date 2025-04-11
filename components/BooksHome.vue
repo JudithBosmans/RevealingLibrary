@@ -7,7 +7,6 @@ import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { routerKey } from "vue-router";
 
 const sceneContainer = ref(null);
 const bookModels = [];
@@ -52,7 +51,7 @@ onMounted(async () => {
       const box = new THREE.Box3().setFromObject(model);
       const size = new THREE.Vector3();
       box.getSize(size);
-      const targetHeight = 1.8;
+      const targetHeight = 1.75;
       const scaleFactor = targetHeight / size.y;
       model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
@@ -66,7 +65,7 @@ onMounted(async () => {
       // X position
       const spacing = 0.1;
       const totalWidth = (books.length - 1) * spacing;
-      model.position.x = index * spacing - totalWidth / 2;
+      model.position.x = index * spacing - totalWidth / 1.8;
 
       model.userData = { id: book.id };
       model.cursor = "pointer";

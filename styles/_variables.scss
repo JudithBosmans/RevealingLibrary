@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 $URL: "";
 $assets: "/";
 
@@ -79,7 +83,6 @@ $grey-light: #f5f5f5;
 $grey-purple: #dfd8e7;
 
 $blue: #1b3e94;
-$red: lighten(#ea2027, 5%);
 $reddark: #db0025;
 $orange: #d55a0a;
 

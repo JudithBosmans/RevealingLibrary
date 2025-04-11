@@ -24,7 +24,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "102",
@@ -51,7 +51,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "103",
@@ -78,7 +78,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "104",
@@ -105,7 +105,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "105",
@@ -132,7 +132,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "106",
@@ -159,7 +159,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "107",
@@ -186,7 +186,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "108",
@@ -213,7 +213,7 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   },
   {
     "id": "109",
@@ -240,6 +240,6 @@
     "subjects": "",
     "part_of_the_project_of": "2023-2024",
     "abstract": "",
-    "model": "./models/book13.glb"
+    "model": "/models/book13.glb"
   }
 ]
