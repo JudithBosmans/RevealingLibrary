@@ -3,3 +3,14 @@
   top: 0;
   left: 0;
 }
+
+.text {
+  &Title {
+    max-width: 10ch;
+    min-width: 10ch;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}

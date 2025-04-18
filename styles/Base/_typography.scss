@@ -1,15 +1,45 @@
 @use "@/styles/variables";
 @use "./font";
 
-h1 {
+h1,
+h2,
+h3 {
+  color: white;
   font-family: "PPMondwest";
   font-weight: normal;
-  font-size: 270px;
+}
 
+p,
+a,
+h3 {
   color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+h1 {
+  width: 100%;
+  font-size: 220px;
   text-align: center;
+
+  line-height: 1;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 180px;
+  text-align: left;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+
+  text-align: left;
+  line-height: 1;
 }
 
 p {
-  color: white;
+  font-size: 18px;
 }

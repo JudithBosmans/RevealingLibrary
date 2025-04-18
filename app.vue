@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="bg-red-500">Miawu</h1>
-    <Drawer />
+    <Nav />
     <NuxtPage />
   </div>
 </template>
 
-<style></style>
+<script></script>

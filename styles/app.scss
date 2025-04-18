@@ -1,2 +1,12 @@
-@use "Base/general";
-@use "Base/typography";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./Base/font";
+@import "./Base/general";
+@import "./Base/typography";
+
+@import "./Components/btn";
+@import "./Components/nav.scss";
+
+@import "./Pages/detail.scss";

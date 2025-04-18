@@ -17,8 +17,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "@nuxtjs/tailwindcss": "^6.13.2",
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5"
   }
