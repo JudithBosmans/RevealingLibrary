@@ -24,7 +24,7 @@
     "subjects": "Art; Germany; 20th century; Dieter Roth",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -52,7 +52,7 @@
     "subjects": "Exhibitions; Art; Jim Dine; Paintings; Watercolors; Objects; Graphic Works",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -80,7 +80,7 @@
     "subjects": "Exhibitions; Art; Situations; Cryptostructures; Stedelijk Museum Amsterdam",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -108,7 +108,7 @@
     "subjects": "Appel, Karel; Painting; Art",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -136,7 +136,7 @@
     "subjects": "Artists' publications; Artists' magazines",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/5_Heubach_Friedrich_Wolfram.glb",
     "availabillity": "Ja"
   },
   {
@@ -164,7 +164,7 @@
     "subjects": "Ray Gun Manufacturing Company; Claes Oldenburg; Art",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/6_Oldenburg_Claes.glb",
     "availabillity": "Ja"
   },
   {
@@ -192,7 +192,7 @@
     "subjects": "Joseph Beuys; Medicine in Art",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/7_Murken_Axel_Hinrich.glb",
     "availabillity": "Ja"
   },
   {
@@ -220,7 +220,7 @@
     "subjects": "Gordon Matta-Clark; Contemporary Art; Exhibitions; Art Support Funds",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/8_Crawford Matta_Clark_Jane.glb",
     "availabillity": "Ja"
   },
   {
@@ -248,7 +248,7 @@
     "subjects": "Artists' publications; Artists' magazines",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -276,7 +276,7 @@
     "subjects": "Jean Dubuffet; French painters; Art Brut",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/10_LIMBOUR_GEORGES.glb",
     "availabillity": "Ja"
   },
   {
@@ -304,7 +304,7 @@
     "subjects": "Christo; American artists; Kunst",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "/models/11.Christo.glb",
     "availabillity": "Ja"
   },
   {
@@ -332,7 +332,7 @@
     "subjects": "Artists' books; Photography, Artistic",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -360,7 +360,7 @@
     "subjects": "Art; 20th Century; 21st Century",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -388,7 +388,7 @@
     "subjects": "Assemblage; Environments; Happenings; United States; 20th Century Art",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -416,7 +416,7 @@
     "subjects": "Pop art; Germany; Aachen; Ludwig, Peter; Art collections; Art around 1970",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -444,7 +444,7 @@
     "subjects": "Roy Lichtenstein; Pop Art; Drawings; Prints",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   },
   {
@@ -472,7 +472,7 @@
     "subjects": "Conceptual art; Netherlands; Sonsbeek Exhibition; Pictorial works",
     "part_of_the_project_of": "2024-2025",
     "abstract": "",
-    "model": "/models/book13.glb",
+    "model": "",
     "availabillity": "Ja"
   }
 ]

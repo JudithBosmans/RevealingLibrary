@@ -15,7 +15,7 @@ const router = useRouter();
 onMounted(async () => {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    80,
+    75,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -191,7 +191,7 @@ onMounted(async () => {
       model.position.x = THREE.MathUtils.lerp(
         model.position.x,
         model.userData.targetX,
-        0.05
+        0.2
       );
 
       // floating animation
