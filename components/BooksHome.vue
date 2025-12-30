@@ -15,7 +15,7 @@ const router = useRouter();
 onMounted(async () => {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    75,
+    65,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -82,6 +82,7 @@ onMounted(async () => {
       model.onClick = () => {
         const { x, y, z } = model.position;
         const ry = model.rotation.y;
+        const scale = model.scale.x;
         router.push({
           path: `/BookDetail/${book.id}`,
           query: {
@@ -89,6 +90,7 @@ onMounted(async () => {
             y,
             z,
             ry,
+            scale,
           },
         });
       };
@@ -96,6 +98,7 @@ onMounted(async () => {
       model.targetScale = 1;
       bookModels.push(model);
       scene.add(model);
+      console.log("Loaded model for:", book.title, "with id:", book.id);
     });
   });
 
